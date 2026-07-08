@@ -1,0 +1,4 @@
+[     391ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://www.automationpratice.com.br/register:0
+[   13875ms] [LOG] email: bruno.qa@example.com @ https://www.automationpratice.com.br/static/js/47.05759863.chunk.js:0
+[   13875ms] [LOG] user: Bruno QA @ https://www.automationpratice.com.br/static/js/47.05759863.chunk.js:0
+[   13875ms] [LOG] pass: senha123 @ https://www.automationpratice.com.br/static/js/47.05759863.chunk.js:0

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($c = Get-Command claude -ErrorAction SilentlyContinue; if \\($c\\) { $c.Source } else { \"not on PATH\" }; npm ls -g @anthropic-ai/claude-code 2>$null; where.exe claude 2>$null)",
+      "PowerShell($paths = @\\(\"$env:APPDATA\\\\npm\\\\claude.cmd\",\"$env:LOCALAPPDATA\\\\Programs\\\\claude\\\\claude.exe\",\"$env:USERPROFILE\\\\.local\\\\bin\\\\claude.exe\",\"$env:USERPROFILE\\\\AppData\\\\Local\\\\claude\\\\claude.exe\"\\); foreach\\($p in $paths\\){ if\\(Test-Path $p\\){ \"FOUND: $p\"; & $p --version } }; \"npm global root:\"; npm root -g 2>$null)"
+    ]
+  }
+}

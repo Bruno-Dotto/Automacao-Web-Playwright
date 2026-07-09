@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-
+import BasePage from './BasePage';
 /**
  * ============================================================================
  * CadastroPage
@@ -16,9 +16,9 @@ import { expect } from '@playwright/test';
  * ============================================================================
  */
 
-class CadastroPage {
+class CadastroPage extends BasePage {
     constructor(page) {
-        this.page = page;
+        super(page);
 
         this.campoNome = page.locator('#user');
         this.campoEmail = page.locator('#email');
@@ -38,7 +38,7 @@ class CadastroPage {
      * Acessa a tela de Cadastro.
      */
     async acessarCadastro() {
-        await this.page.goto('https://www.automationpratice.com.br/register');
+        await this.acessar('https://www.automationpratice.com.br/register');
     }
 
     async preencherNome(nome) {
@@ -76,7 +76,7 @@ class CadastroPage {
      */
     async validarCadastroSucesso() {
         await expect(this.mensagemCadastroSucesso).toBeVisible();
-        await expect(this.page).toHaveURL(/\/my-account/);
+        await this.validarUrl(/\/my-account/);
     }
 
     /**

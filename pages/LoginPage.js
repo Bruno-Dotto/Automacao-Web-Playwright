@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-
+import BasePage from './BasePage';
 /**
  * ============================================================================
  * LoginPage
@@ -17,9 +17,9 @@ import { expect } from '@playwright/test';
  * ============================================================================
  */
 
-class LoginPage {
+class LoginPage extends BasePage {
     constructor(page) {
-        this.page = page;
+        super(page);
 
         this.campoEmail = page.locator('#user');
         this.campoSenha = page.locator('#password');
@@ -37,7 +37,7 @@ class LoginPage {
      * Acessa a tela de Login da aplicação.
      */
     async acessarLogin() {
-        await this.page.goto('https://www.automationpratice.com.br/');
+        await this.acessar('https://www.automationpratice.com.br/');
 
         await this.page
             .getByRole('link', { name: ' Login' })

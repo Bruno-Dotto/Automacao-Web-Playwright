@@ -1,6 +1,7 @@
 
 import { test } from '@playwright/test';
 import CadastroPage from '../pages/CadastroPage';
+import { gerarDadosUsuario } from '../utils/gerarDados';
 
 test.describe('Testes de Cadastro de Usuário', () => {
     let cadastroPage;
@@ -11,10 +12,12 @@ test.describe('Testes de Cadastro de Usuário', () => {
     });
 
     test('Cadastro com sucesso', async () => {
+        const usuario = gerarDadosUsuario();
+
         await cadastroPage.cadastrarUsuario(
-            'Bruno QA',
-            'bruno.qa@example.com',
-            'senha123'
+            usuario.nome,
+            usuario.email,
+            usuario.senha
         );
 
         await cadastroPage.validarCadastroSucesso();

@@ -1,12 +1,23 @@
 {
   "name": "automacao-web-playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de automação de testes end-to-end utilizando Playwright e arquitetura Page Object Model (POM).",
+  "author": "Bruno Dotto",
   "license": "ISC",
-  "author": "",
   "type": "commonjs",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:login": "playwright test tests/login.spec.js",
+    "test:home": "playwright test tests/home.spec.js",
+    "test:cadastro": "playwright test tests/cadastro-de-usuario.spec.js",
+    "test:checkout": "playwright test tests/checkout.spec.js",
+    "test:ci": "playwright test",
+    "report": "playwright show-report"
+  },
   "devDependencies": {
     "@faker-js/faker": "^10.5.0",
     "@playwright/test": "^1.61.1",

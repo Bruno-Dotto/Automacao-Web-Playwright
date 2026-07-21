@@ -1,13 +1,22 @@
 # 🚀 Automação Web com Playwright
 
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?logo=node.js&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=github-actions&logoColor=white)
+[![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=github-actions&logoColor=white)](https://github.com/Bruno-Dotto/Automacao-Web-Playwright/actions)
+[![Relatório Online](https://img.shields.io/badge/Playwright_Report-Online-success?logo=githubpages&logoColor=white)](https://bruno-dotto.github.io/Automacao-Web-Playwright/)
 
 Projeto de automação de testes End-to-End desenvolvido com **Playwright**, utilizando a arquitetura **Page Object Model (POM)** e boas práticas de automação de testes.
 
 O projeto foi desenvolvido com foco em organização, reutilização de código e manutenibilidade, contemplando a separação entre páginas, testes e utilitários, além da geração dinâmica de dados utilizando **Faker**.
+
+## 📊 Relatório da Última Execução
+
+O relatório HTML é publicado automaticamente após cada execução da pipeline através do **GitHub Pages**.
+
+🔗 **Acesse o relatório online:**
+
+https://bruno-dotto.github.io/Automacao-Web-Playwright/
 
 Os testes automatizam os principais fluxos da aplicação:
 

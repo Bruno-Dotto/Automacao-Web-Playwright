@@ -1,10 +1,15 @@
 # 🚀 Automação Web com Playwright
 
-Projeto de automação de testes end-to-end desenvolvido com **Playwright**, utilizando a arquitetura **Page Object Model (POM)** e boas práticas de automação de testes.
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?logo=node.js&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=github-actions&logoColor=white)
+
+Projeto de automação de testes End-to-End desenvolvido com **Playwright**, utilizando a arquitetura **Page Object Model (POM)** e boas práticas de automação de testes.
 
 O projeto foi desenvolvido com foco em organização, reutilização de código e manutenibilidade, contemplando a separação entre páginas, testes e utilitários, além da geração dinâmica de dados utilizando **Faker**.
 
-Os testes automatizam os principais fluxos da aplicação, incluindo:
+Os testes automatizam os principais fluxos da aplicação:
 
 - Login
 - Cadastro de Usuário
@@ -15,30 +20,60 @@ Todo o projeto foi estruturado seguindo boas práticas de desenvolvimento, reuti
 
 ---
 
-# 🛠 Tecnologias utilizadas
+# 📑 Índice
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+- Funcionalidades
+- Tecnologias utilizadas
+- Desenvolvimento Assistido por IA
+- Arquitetura
+- Estrutura de Pastas
+- Pré-requisitos
+- Instalação
+- Execução dos Testes
+- Relatórios
+- Integração Contínua (CI)
+- Autor
+
+---
+
+# ✨ Funcionalidades
+
+- Automação Web com Playwright
+- Arquitetura Page Object Model (POM)
+- BasePage para reutilização de código
+- Geração dinâmica de dados utilizando Faker
+- Testes End-to-End
+- Execução paralela dos testes
+- Relatório HTML
+- Screenshots automáticos em falhas
+- Vídeos automáticos em falhas
+- Trace automático em falhas
+- Pipeline automatizada com GitHub Actions
+
+---
+
+# 🛠 Tecnologias utilizadas
 
 | Tecnologia | Finalidade |
 |------------|------------|
 | Playwright | Framework de automação Web |
-| JavaScript (ES6+) | Linguagem utilizada na automação |
+| JavaScript (ES6+) | Linguagem utilizada |
 | Node.js | Ambiente de execução |
-| GitHub Actions | Execução automatizada dos testes (CI) |
-| Faker | Geração dinâmica de dados para testes |
+| GitHub Actions | Integração Contínua (CI) |
+| Faker | Geração dinâmica de dados |
 | Git | Controle de versão |
 | GitHub | Hospedagem do repositório |
 
 ---
 
-## 🤖 Desenvolvimento Assistido por Inteligência Artificial
+# 🤖 Desenvolvimento Assistido por Inteligência Artificial
 
 Durante o desenvolvimento deste projeto foram utilizadas ferramentas de Inteligência Artificial como apoio à construção da suíte de testes e à produtividade no processo de desenvolvimento.
 
-Entre elas:
+Ferramentas utilizadas:
 
-- **MCP Playwright:** utilizado para exploração da aplicação, inspeção de elementos, validação de locators e apoio na criação dos testes automatizados.
-- **Skill personalizada:** utilizada para auxiliar na geração de cenários de teste, documentação em Gherkin e estrutura inicial de testes automatizados.
+- **MCP Playwright:** exploração da aplicação, inspeção de elementos, validação de locators e apoio na construção dos testes.
+- **Skill personalizada:** auxílio na geração de cenários em Gherkin, documentação e estrutura inicial dos testes automatizados.
 
 Todas as implementações produzidas com apoio de IA foram revisadas, adaptadas e padronizadas para seguir a arquitetura do projeto, garantindo consistência, legibilidade e facilidade de manutenção do código.
 
@@ -48,50 +83,47 @@ Todas as implementações produzidas com apoio de IA foram revisadas, adaptadas 
 
 O projeto segue o padrão **Page Object Model (POM)**, separando responsabilidades para tornar os testes mais organizados, reutilizáveis e fáceis de manter.
 
-Além da separação entre páginas e testes, foi implementada uma **BasePage**, responsável por centralizar comportamentos comuns, reduzindo duplicação de código e mantendo um padrão consistente entre todas as páginas da aplicação.
+Além da separação entre páginas e testes, foi implementada uma **BasePage**, responsável por centralizar comportamentos comuns, reduzindo duplicação de código e mantendo um padrão consistente entre todas as as páginas da aplicação.
 
-A arquitetura está organizada da seguinte forma:
+Organização da arquitetura:
 
-- **Pages:** concentram os locators e as ações de cada página da aplicação.
-- **Tests:** contêm as suítes de testes responsáveis pela validação dos fluxos automatizados.
-- **Utils:** centralizam funções reutilizáveis, como geração dinâmica de dados para testes.
-- **BasePage:** concentra funcionalidades compartilhadas entre todas as páginas da aplicação.
+- **Pages:** locators e ações das páginas.
+- **Tests:** suítes de testes.
+- **Utils:** funções reutilizáveis.
+- **BasePage:** funcionalidades compartilhadas.
 
 ---
 
-# 📂 Estrutura de pastas
-
-A estrutura do projeto foi organizada para separar responsabilidades, facilitar a manutenção e incentivar a reutilização de código.
+# 📂 Estrutura de Pastas
 
 ```text
 AUTOMACAO-WEB-PLAYWRIGHT
 │
 ├── .github/
-│   └── workflows/              # Pipeline de Integração Contínua (GitHub Actions)
+│   └── workflows/
 │
-├── auth/                       # Estado de autenticação do Playwright
+├── auth/
 │
-├── features/                   # Cenários documentados em Gherkin
+├── features/
 │
-├── pages/                      # Implementação do padrão Page Object Model
+├── pages/
 │   ├── BasePage.js
 │   ├── CadastroPage.js
 │   ├── CheckoutPage.js
 │   ├── HomePage.js
 │   └── LoginPage.js
 │
-├── playwright-report/          # Relatórios HTML do Playwright
+├── playwright-report/
 │
-├── test-reports/               # Relatórios e evidências das execuções
-│   └── evidencias/
+├── test-results/
 │
-├── tests/                      # Testes automatizados
+├── tests/
 │   ├── cadastro-de-usuario.spec.js
 │   ├── checkout.spec.js
 │   ├── home.spec.js
 │   └── login.spec.js
 │
-├── utils/                      # Funções auxiliares
+├── utils/
 │   └── gerarDados.js
 │
 ├── .gitignore
@@ -105,22 +137,20 @@ AUTOMACAO-WEB-PLAYWRIGHT
 
 | Pasta | Responsabilidade |
 |--------|------------------|
-| **pages/** | Centraliza os locators e as ações de cada página da aplicação seguindo o padrão Page Object Model (POM). |
-| **tests/** | Contém as suítes de testes responsáveis por validar os principais fluxos automatizados da aplicação. |
-| **utils/** | Reúne funções reutilizáveis, como geração dinâmica de dados para testes. |
-| **features/** | Armazena a documentação dos cenários em Gherkin utilizada como apoio ao desenvolvimento. |
-| **test-reports/** | Armazena relatórios em Markdown e evidências geradas durante as execuções dos testes. |
-| **playwright-report/** | Contém os relatórios HTML gerados automaticamente pelo Playwright após a execução dos testes. |
-| **auth/** | Armazena o estado de autenticação utilizado pelo Playwright para reutilização de sessões quando necessário. |
-| **.github/workflows/** | Contém a configuração da pipeline de Integração Contínua utilizando GitHub Actions. |
+| pages | Implementação do padrão Page Object Model |
+| tests | Testes automatizados |
+| utils | Funções reutilizáveis |
+| features | Cenários documentados em Gherkin |
+| playwright-report | Relatório HTML gerado pelo Playwright |
+| test-results | Evidências (screenshots, vídeos e traces) |
+| auth | Estado de autenticação |
+| .github/workflows | Pipeline CI |
 
 ---
 
 # ⚙️ Pré-requisitos
 
-Antes de executar o projeto, certifique-se de possuir os seguintes requisitos instalados:
-
-- Node.js 18 ou superior
+- Node.js 18+
 - Git
 - Visual Studio Code (recomendado)
 
@@ -142,7 +172,7 @@ Clone o repositório:
 git clone <URL_DO_REPOSITORIO>
 ```
 
-Acesse a pasta do projeto:
+Entre na pasta:
 
 ```bash
 cd AUTOMACAO-WEB-PLAYWRIGHT
@@ -154,7 +184,7 @@ Instale as dependências:
 npm install
 ```
 
-Instale os navegadores utilizados pelo Playwright:
+Instale os navegadores do Playwright:
 
 ```bash
 npx playwright install
@@ -176,25 +206,25 @@ Executar um arquivo específico:
 npx playwright test tests/login.spec.js
 ```
 
-Executar utilizando apenas o Chromium:
+Executar somente no Chromium:
 
 ```bash
 npx playwright test --project=chromium
 ```
 
-Executar em modo visual (UI Mode):
+Executar em modo UI:
 
 ```bash
 npx playwright test --ui
 ```
 
-Executar em modo headed (com navegador visível):
+Executar em modo Headed:
 
 ```bash
 npx playwright test --headed
 ```
 
-Executar em modo debug:
+Executar em modo Debug:
 
 ```bash
 npx playwright test --debug
@@ -204,22 +234,63 @@ npx playwright test --debug
 
 # 📊 Relatórios
 
-Após a execução dos testes, o Playwright gera automaticamente um relatório HTML.
+Após cada execução, o Playwright gera automaticamente um relatório HTML.
 
-Para abrir o relatório:
+Abrir relatório:
 
 ```bash
 npx playwright show-report
 ```
 
-Além do relatório HTML, o projeto também pode gerar:
+Quando um teste falha, o projeto gera automaticamente:
 
-- Evidências de execução
-- Relatórios em Markdown
-- Documentação dos cenários em Gherkin
+- 📸 Screenshot da falha
+- 🎥 Vídeo da execução
+- 🔍 Trace completo da execução
 
-Todos esses artefatos ficam disponíveis na pasta:
+As evidências ficam disponíveis em:
 
 ```text
-test-reports/
+test-results/
 ```
+
+O relatório HTML é armazenado em:
+
+```text
+playwright-report/
+```
+
+Durante a execução da pipeline, o relatório HTML também é disponibilizado como artefato no GitHub Actions.
+
+---
+
+# 🔄 Integração Contínua (CI)
+
+O projeto utiliza **GitHub Actions** para execução automática da suíte de testes.
+
+A pipeline realiza as seguintes etapas:
+
+- Checkout do código
+- Instalação das dependências
+- Instalação dos navegadores do Playwright
+- Execução da suíte de testes
+- Geração do relatório HTML
+- Publicação do relatório como artefato
+
+---
+
+# 👨‍💻 Autor
+
+**Bruno Dotto**
+
+GitHub:
+
+https://github.com/Bruno-Dotto
+
+LinkedIn:
+
+<www.linkedin.com/in/bruno-zimmermann-dotto-859985423>
+
+---
+
+⭐ Caso este projeto tenha sido útil para você, considere deixar uma estrela no repositório.
